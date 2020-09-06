@@ -9,6 +9,7 @@ import path from 'path'
 import CustomLink from '../../components/CustomLink'
 import Layout from '../../components/Layout'
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils'
+import { CustomOptimizedImages } from '../../components/CustomOptimzedImage'
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -16,6 +17,7 @@ import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils'
 // here.
 const components = {
   a: CustomLink,
+  img: CustomOptimizedImages,
   // It also works with dynamically-imported components, which is especially
   // useful for conditionally loading components for certain routes.
   // See the notes in README.md for more details.
