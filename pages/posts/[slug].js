@@ -1,3 +1,4 @@
+import { useAmp } from 'next/amp'
 import fs from 'fs'
 import matter from 'gray-matter'
 import hydrate from 'next-mdx-remote/hydrate'
@@ -21,6 +22,11 @@ import externalLinks from 'remark-external-links'
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
 // to handle import statements. Instead, you must include components in scope
 // here.
+
+export const config = {
+  amp: 'hybrid'
+}
+
 const components = {
   a: CustomLink,
   img: CustomOptimizedImages,
@@ -32,6 +38,7 @@ const components = {
 }
 
 export default function PostPage({ source, frontMatter }) {
+  const isAmp = useAmp()
   const content = hydrate(source, { components })
   return (
     <Layout>
@@ -44,6 +51,7 @@ export default function PostPage({ source, frontMatter }) {
       </header>
       <div className="post-header">
         <h1>{frontMatter.title}</h1>
+        <h2>index: {isAmp ? 'amp' : 'normal'}</h2>
         {frontMatter.description && (
           <p className="description">{frontMatter.description}</p>
         )}
@@ -69,7 +77,6 @@ export default function PostPage({ source, frontMatter }) {
 export const getStaticProps = async ({ params }) => {
   const postFilePath = path.join(POSTS_PATH, `${params.slug}.mdx`)
   const source = fs.readFileSync(postFilePath)
-
   const { content, data } = matter(source)
 
   const mdxSource = await renderToString(content, {

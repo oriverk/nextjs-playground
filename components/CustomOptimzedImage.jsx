@@ -1,26 +1,32 @@
+import { useAmp } from 'next/amp'
+
 export function CustomOptimizedImages({ src, alt, ...otherProps }) {
   const sliced = src.slice(0, 1) === '/' ? src.slice(1) : src
   const split = sliced.split('/')[0] === 'assets' ? sliced.replace('assets/', '') : sliced
   // => posts/hoge.jpg
   const optimizedAlt = alt === null ? 'image' : alt
-
+  
+  const isAmp = useAmp()
   return (
     <React.Fragment>
+      <div>image: {isAmp ? 'amp': 'normal'}</div>
       <div className='optimized relative'>
-        <picture>
-          <source
-            className='webp w-full'
-            // srcSet={responsiveImageWebp.srcSet}
-            srcSet={require(`@public/assets/${split}?{sizes:[640, 960, 1200, 1800], format: 'webp' }`).srcSet}
-            type='image/webp'
-          />
-          <img
-            className='jpeg w-full'
-            src={require(`@public/assets/${split}?resize`).src}
-            srcSet={require(`@public/assets/${split}?resize`).srcSet}
+          <amp-img
             alt={optimizedAlt}
-          />
-        </picture>
+            width='550'
+            height='368'
+            src={require(`@public/assets/${split}?{sizes:[640,960,1200,1800], format: 'webp' }`).src}
+            >
+            {/* src={require(`@public/assets/${split}?webp`)} */}
+            <amp-img
+              alt={optimizedAlt}
+              fallback=''
+              width='550'
+              height='368'
+              src={require(`@public/assets/${split}?resize`).src}
+            >
+            </amp-img>
+          </amp-img>
       </div>
       <style jsx>{`
         div.optimized{

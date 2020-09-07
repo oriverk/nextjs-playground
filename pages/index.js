@@ -1,11 +1,17 @@
 import fs from 'fs'
 import matter from 'gray-matter'
 import Link from 'next/link'
+import { useAmp } from 'next/amp'
 import path from 'path'
 import Layout from '../components/Layout'
 import { postFilePaths, POSTS_PATH } from '../utils/mdxUtils'
 
+export const config = {
+  amp: true
+}
+
 export default function Index({ posts }) {
+  const isAmp = useAmp()
   return (
     <Layout>
       <h1>Home Page</h1>
