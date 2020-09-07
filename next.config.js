@@ -1,5 +1,6 @@
 const withPlugins = require('next-compose-plugins')
 
+const withPWA = require('next-pwa')
 const optimizedImages = require('next-optimized-images')
 const { resolve } = require('path')
 
@@ -12,12 +13,12 @@ const nextConfig = {
   },
 }
 
-// const nextPwaConfig = {
-//   pwa: {
-//     disable: process.env.MODE_ENV === 'development',
-//     dest: 'public'
-//   }
-// }
+const nextPwaConfig = {
+  pwa: {
+    disable: process.env.MODE_ENV === 'development',
+    dest: 'public'
+  }
+}
 
 const nextOptimizedImagesConfig = {
   inlineImageLimit: 8192,
@@ -46,9 +47,9 @@ const nextOptimizedImagesConfig = {
 
 module.exports = withPlugins(
   [
-    // [
-    //   withPWA, nextPwaConfig
-    // ],
+    [
+      withPWA, nextPwaConfig
+    ],
     [
       optimizedImages, nextOptimizedImagesConfig
     ],
