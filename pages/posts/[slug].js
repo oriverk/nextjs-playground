@@ -10,6 +10,12 @@ import CustomLink from '../../components/CustomLink'
 import Layout from '../../components/Layout'
 import { postFilePaths, POSTS_PATH } from '../../utils/mdxUtils'
 import { CustomOptimizedImages } from '../../components/CustomOptimzedImage'
+import slug from 'remark-slug'
+import headings2autolink from 'remark-autolink-headings'
+import breaks from 'remark-breaks'
+import squeeze from 'remark-squeeze-paragraphs'
+import toc from 'remark-toc'
+import externalLinks from 'remark-external-links'
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -70,7 +76,17 @@ export const getStaticProps = async ({ params }) => {
     components,
     // Optionally pass remark/rehype plugins
     mdxOptions: {
-      remarkPlugins: [],
+      remarkPlugins: [
+        breaks,
+        squeeze,
+        slug,
+        [headings2autolink, {
+          behavior: 'wrap',
+          linkProperties: { ariaHidden: true, tabIndex: -1, class: 'heading-link'}
+        }],
+        externalLinks,
+        toc,
+      ],
       rehypePlugins: [],
     },
     scope: data,
