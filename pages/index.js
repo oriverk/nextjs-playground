@@ -5,6 +5,7 @@ import { useAmp } from 'next/amp'
 import path from 'path'
 import Layout from '../components/Layout'
 import { postFilePaths, POSTS_PATH } from '../utils/mdxUtils'
+import Head from 'next/head'
 
 export const config = {
   amp: true
