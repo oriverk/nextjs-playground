@@ -1,36 +1,36 @@
 {
-  "name": "with-mdx-remote",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "next",
-    "dev:watch": "next-remote-watch ./posts",
-    "build": "next build",
-    "start": "next start",
-    "bs": "next build && next start"
-  },
-  "dependencies": {
-    "gray-matter": "^4.0.2",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-optipng": "^8.0.0",
-    "next": "latest",
-    "next-compose-plugins": "^2.2.0",
-    "next-mdx-remote": "^1.0.0",
-    "next-optimized-images": "^2.6.2",
-    "next-pwa": "^3.1.3",
-    "next-remote-watch": "0.2.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "remark-autolink-headings": "^6.0.1",
-    "remark-breaks": "^2.0.0",
-    "remark-external-links": "^7.0.0",
-    "remark-slug": "^6.0.0",
-    "remark-squeeze-paragraphs": "^4.0.0",
-    "remark-toc": "^7.0.0",
-    "responsive-loader": "^2.1.0",
-    "webp-loader": "^0.6.0"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "sharp": "^0.26.0"
-  }
+    "name": "with-mdx-remote",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "next",
+        "dev:watch": "next-remote-watch ./posts",
+        "build": "next build",
+        "start": "next start",
+        "bs": "next build && next start"
+    },
+    "dependencies": {
+        "gray-matter": "^4.0.2",
+        "imagemin-mozjpeg": "^9.0.0",
+        "imagemin-optipng": "^8.0.0",
+        "next": "latest",
+        "next-compose-plugins": "^2.2.0",
+        "next-mdx-remote": "^1.0.0",
+        "next-optimized-images": "^2.6.2",
+        "next-pwa": "^3.1.3",
+        "next-remote-watch": "0.2.0",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "remark-autolink-headings": "^6.0.1",
+        "remark-breaks": "^2.0.0",
+        "remark-external-links": "^7.0.0",
+        "remark-slug": "^6.0.0",
+        "remark-squeeze-paragraphs": "^4.0.0",
+        "remark-toc": "^7.0.0",
+        "responsive-loader": "^2.1.0",
+        "webp-loader": "^0.6.0"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "sharp": "^0.26.0"
+    }
 }
