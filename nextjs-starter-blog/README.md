@@ -2,6 +2,10 @@
   Next.js blog starter
 </h1>
 
+## this repository is forked from 
+[JoseRFelix/nextjs-starter-blog](https://github.com/JoseRFelix/nextjs-starter-blog)
+
+
 Start off your writing journey with this Next.js markdown blog template.
 
 ## ✏ Features
