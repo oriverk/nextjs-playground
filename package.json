@@ -1,15 +1,36 @@
 {
-  "name": "react-markdown",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "9.5.2",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
-  }
+    "name": "react-markdown",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "imagemin-mozjpeg": "^9.0.0",
+        "imagemin-optipng": "^8.0.0",
+        "lqip-loader": "^2.2.0",
+        "next": "9.5.2",
+        "next-compose-plugins": "^2.2.0",
+        "next-optimized-images": "^2.6.2",
+        "react": "16.13.1",
+        "react-dom": "16.13.1",
+        "react-markdown": "^4.3.1",
+        "react-syntax-highlighter": "^13.5.1",
+        "react-typography": "^0.16.19",
+        "responsive-loader": "^2.1.1",
+        "sharp": "^0.26.0",
+        "typeface-merriweather": "^0.0.72",
+        "typeface-open-sans": "^0.0.75",
+        "typography-theme-sutro": "^0.16.19",
+        "webp-loader": "^0.6.0"
+    },
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^2.3.0",
+        "autoprefixer": "^9.8.6",
+        "gray-matter": "^4.0.2",
+        "postcss-import": "^12.0.1",
+        "tailwindcss": "^1.7.3"
+    }
 }
