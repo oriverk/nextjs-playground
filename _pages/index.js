@@ -36,10 +36,12 @@ export default function Home() {
             </div>
           </Link>
 
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Next.js &rarr;</h3>
-            <p>{t('home:next-docs')}</p>
-          </a>
+          <Link href="/" locale="ja">
+            <div className="card">
+              <h3>{t('home:japanese')}</h3>
+              <p>{t('home:change-japanese')}</p>
+            </div>
+          </Link>
 
           <a
             href="https://github.com/vinissimus/next-translate"

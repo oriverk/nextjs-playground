@@ -1,7 +1,9 @@
 {
   "catalan": "Catalan",
+  "japanese": "Japanese",
   "change-catalan": "Change language to Catalan",
   "change-english": "Change language to English",
+  "change-japanese": "Change language to Japanese",
   "description": "Get started by editing",
   "english": "English",
   "next-docs": "Find in-depth information about Next.js features and API.",

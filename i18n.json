@@ -1,5 +1,5 @@
 {
-  "locales": ["en", "ca"],
+  "locales": ["en", "ca", "ja"],
   "defaultLocale": "en",
   "currentPagesDir": "_pages",
   "finalPagesDir": "pages",
