@@ -2,6 +2,8 @@
 
 This is an example of using [next-translate](https://github.com/vinissimus/next-translate) in a Next.js project.
 
+![next-translate](https://user-images.githubusercontent.com/44029144/99228525-14f3df00-2830-11eb-84bd-d33a30cb53ff.gif)
+
 ## Deploy your own
 
 Deploy the example using [Vercel](https://vercel.com):
